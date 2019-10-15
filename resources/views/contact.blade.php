@@ -1,9 +1,9 @@
 @extends('layout')
 
 @section('title')
-    Home
+    Contact Us
 @endsection
 
 @section('content')
-    <h1>Welcome to my Laracasts progress!</h1>
+    <h1>Contact</h1>
 @endsection
