@@ -15,24 +15,24 @@
         {{ method_field('PATCH') }}
         {{ csrf_field() }}
     
-        <div class="field">
-            <label class="label" for="title">Title</label>
+        <div class="form-group">
+            <label for="title">Title</label>
             
-            <div class="control">
-                <input type="text" class="input" name="title" placeholder="Title" value="{{ $project->title }}">
+            <div class="form-group">
+                <input type="text" class="form-control" name="title" placeholder="Title" value="{{ $project->title }}">
             </div>
             
-            <div class="field">
-                <label class="label" for="description">Description</label>
+            <div>
+                <label for="description">Description</label>
                 
-                <div class="control">
-                    <textarea name="description" class="textarea">{{ $project->description }}</textarea>         
+                <div>
+                    <textarea name="description" class="form-control">{{ $project->description }}</textarea>         
                 </div>
             </div>
             
-            <div class="field">
-                <div class="control">
-                    <button type="submit" class="button is-link">Update Project</button>  
+            <div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Update Project</button>  
                 </div>
             </div>
             
@@ -43,9 +43,9 @@
         {{ method_field('DELETE') }}
         {{ csrf_field() }}
         
-        <div class="field">
-            <div class="control">
-            <button type="submit" class="button">Delete Project</button>
+        <div>
+            <div>
+            <button type="submit" class="btn btn-danger">Delete Project</button>
             </div>
         </div>
     </form>

@@ -36,6 +36,25 @@ a:visited {
   clear: both;
 }
 
+/* LARAVEL ADDITIONS */
+
+.blue-link {
+    color: #4bc9ff;
+}
+
+.is-complete {
+    text-decoration: line-through;
+}
+
+.panel {
+    padding: 1em;
+    margin-top: 0.3em;
+}
+
+.btn {
+    margin-top: 0.4em;
+}
+
 /* FULL SCREEN LANDING */
 
 .intro {

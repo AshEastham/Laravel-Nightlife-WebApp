@@ -15,27 +15,36 @@
     
         {{ csrf_field() }}
     
-        <div>
+        <div class="form-group">
             <label for="title">Project Title</label><br>
-            <input type="text" name="title" placeholder="Project title" value="{{ old('title') }}" required>
+            <input 
+                type="text" 
+                class="form-control" 
+                name="title" 
+                placeholder="Project title" 
+                value="{{ old('title') }}" 
+                required
+            >
         </div>
         
-        <div>
+        <div class="form-group">
             <label for="description">Project Description</label><br>
-            <textarea name="description" placeholder="Project description" value="{{ old('description') }}" required></textarea>
+            <textarea 
+                name="description" 
+                class="form-control" 
+                placeholder="Project description" 
+                value="{{ old('description') }}" 
+                required
+            >
+            
+            </textarea>
         </div>
         
         <div>
-            <button type="submit">Create Project</button>
+            <button type="submit" class="btn btn-primary">Create Project</button>
         </div>
         
-        <div class="notification is-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach    
-            </ul>
-        </div>
+        @include('errors')
         
     </form>
 @endsection
