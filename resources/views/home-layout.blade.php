@@ -71,12 +71,20 @@
         </div>          
       </div>
       
+    
+      <div class="intro">
+        <div class="intro-inner">
+            <div class="content">
+                <h1>BEGIN</h1>
+                <a href="#main"><span class="glyphicon glyphicon-download intro-button"></span></a>
+            </div>
+        </div>
+      </div>     
+      
       <!--CONTENT-->
       <div id="main">
-        <div class="container">
-            <h1 class="page-title">@yield('page-title')</h1>
-            @yield('content')
-        </div>    
+        <h1 class="page-title">@yield('page-title')</h1>
+        @yield('content')
       </div>
       
       <div class="clear"></div>

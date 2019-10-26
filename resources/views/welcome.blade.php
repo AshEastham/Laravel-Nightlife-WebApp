@@ -1,9 +1,13 @@
-@extends('layout')
+@extends('home-layout')
 
 @section('title')
     Home
 @endsection
 
+@section('page-title')
+    Welcome
+@endsection
+
 @section('content')
-    <h1>Welcome to my {{ $foo }} progress!</h1>
+
 @endsection

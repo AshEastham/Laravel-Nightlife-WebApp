@@ -8,9 +8,11 @@
     Show Project
 @endsection
 
-@section('content')
-    <h1 class="title">{{ $project->title }}</h1>
-    
+@section('page-title')
+    {{ $project->title }}
+@endsection
+
+@section('content')    
     <div>{{ $project->description }}</div>
     
     <p>

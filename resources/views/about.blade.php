@@ -4,6 +4,10 @@
     About
 @endsection
 
+@section('page-title')
+    About
+@endsection
+
 @section('content')
-    <h1>About Us!</h1>
+    <p>content</p>
 @endsection
