@@ -1,5 +1,10 @@
 <?php
 
+/* Route Model Binding */
+/* app()->bind('example', function (){
+    return new \App\Example;
+}); */
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,6 +15,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+/* Route::get('/', function() {
+   dd(app('foo'));
+}); */
 
 Route::get('/', 'PagesController@home');
 
@@ -25,3 +34,7 @@ Route::patch('/tasks/{task}', 'ProjectTasksController@update');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

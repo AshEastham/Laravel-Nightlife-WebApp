@@ -55,6 +55,29 @@ a:visited {
     margin-top: 0.4em;
 }
 
+#top-bar {
+    background-color: #11598c ;
+    color: white;
+}
+
+.login-buttons {
+    float: right;
+    padding: 0.4em;
+    margin-right: 0.43em;
+    font-weight: 400;
+    font-size: 1.2em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.login-buttons > a {
+    color: white;
+    transition: 0.3s;
+    opacity: 0.8;
+    padding: 0.5em;
+    list-style-type: none;
+    text-decoration: none;
+}
+
 /* FULL SCREEN LANDING */
 
 .intro {
