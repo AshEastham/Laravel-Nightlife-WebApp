@@ -32,7 +32,7 @@
         <div class="container">
             <div class="login-buttons">
                 @guest
-                    <li><a href="{{ route('login') }}">Login</a></li>
+                    <li><a href="{{ route('login') }}">Login</a></li> |
                     <li><a href="{{ route('register') }}">Register</a></li>
                 @else
                     <li class="dropdown">
@@ -106,7 +106,11 @@
       <div class="intro">
         <div class="intro-inner">
             <div class="content">
-                <h1>BEGIN</h1>
+                @guest
+                    <h1>BEGIN</h1>
+                @else
+                    <h1>Welcome {{ Auth::user()->name }}</h1>
+                @endguest
                 <a href="#main"><span class="glyphicon glyphicon-download intro-button"></span></a>
             </div>
         </div>
