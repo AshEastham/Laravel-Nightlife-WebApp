@@ -1,11 +1,7 @@
 @extends('../layout')
 
 @section('title')
-    Show Project
-@endsection
-
-@section('title')
-    Show Project
+    {{ $project->title }}
 @endsection
 
 @section('page-title')
