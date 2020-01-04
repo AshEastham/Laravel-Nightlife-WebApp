@@ -2,18 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Venue;
+
 use Illuminate\Http\Request;
 
 class VenuesController extends Controller
 {
     public function index() 
     {
-        $venues = Venues::all();
+        $venues = Venue::all();
         
         return view('venues.index', compact('venues'));
     }
     
-    public function show(Project $project) {
+    public function show(Venue $venue) {
         return view('venues.show', compact('venue'));
     }
     
@@ -54,7 +56,7 @@ class VenuesController extends Controller
         return redirect('/venues');
     }
     
-    public function destroy(Venue $venue
+    public function destroy(Venue $venue)
     {
         $project->delete();
         return redirect('/venues');

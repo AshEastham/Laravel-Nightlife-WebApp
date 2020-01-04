@@ -102,27 +102,10 @@
             </div>    
 
         </div>          
-      </div>
-      
-    
-      <div class="intro">
-        <div class="intro-inner">
-            <div class="content">
-                @guest
-                    <h1>BEGIN</h1>
-                @else
-                    <h1>Welcome {{ Auth::user()->name }}</h1>
-                @endguest
-                <a href="#main"><span class="glyphicon glyphicon-download intro-button"></span></a>
-            </div>
-        </div>
-      </div>     
+      </div>   
       
       <!--CONTENT-->
-      <div id="main">
-        <h1 class="page-title">@yield('page-title')</h1>
-        @yield('content')
-      </div>
+      @yield('content')
       
       <div class="clear"></div>
       
@@ -164,7 +147,8 @@
       <!-- Include all compiled plugins (below), or include individual files as needed -->
       <script src="{{ asset('js/bootstrap.min.js') }}"></script>
       <script src="{{ asset('js/smooth_scroll.js') }}"></script>
-      <script src="{{ asset('js/fullscreen-nav.js') }}"></script>      
+      <script src="{{ asset('js/fullscreen-nav.js') }}"></script>
+      <script src="{{ asset('js/venues.js') }}"></script>
            
     </body>
 </html>

@@ -352,6 +352,10 @@ a {
   color: #FFF;
 }
 
+.stage-name {
+    text-transform: uppercase;
+}
+
 .stage-desc {
   display: none;
   margin: 0;
@@ -364,141 +368,11 @@ a {
 
 .stage-desc > p {
   font-family: 'Open Sans', sans-serif;
-
 }
 
 /* VENUES-INFO-CONTENT */
 
-.beaverworks {
-  background: url('../images/beaverworks-profile.jpg');
-  height: 475px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-}
-
-.canalmills {
-  background: url('../images/canalmills-profile.jpg');
-  height: 475px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-}
-
-.church {
-  background: url('../images/church-profile.jpg');
-  height: 475px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-}
-
-.distrikt {
-  background: url('../images/distrikt-profile.jpg');
-  height: 475px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-}
-
-.headrow {
-  background: url('../images/headrow-profile.jpg');
-  height: 475px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-}
-
-.hifi {
-  background: url('../images/hifi-profile.jpg');
-  height: 475px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-}
-
-.mint {
-  background: url('../images/mint-profile.jpg');
-  height: 475px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-}
-
-.mint-warehouse {
-  background: url('../images/mintwarehouse-profile.jpg');
-  height: 475px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-}
-
-.wire {
-  background: url('../images/wire-profile.jpg');
-  height: 475px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-}
-
-/* EVENTS IMAGES */
-
-.primalsound {
-  background: url('../images/primalsound-profile.jpg');
-  height: 475px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-}
-
-.triplecooked {
-  background: url('../images/triplecooked-profile.jpg');
-  height: 475px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-}
-
-.gardenparty {
-  background: url('../images/gardenparty-profile.jpg');
-  height: 475px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-}
-
-.flux {
-  background: url('../images/flux-profile.jpg');
-  height: 475px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-}
-
-.goodlife {
-  background: url('../images/goodlife-profile.jpg');
-  height: 475px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-}
-
-.highrise {
-  background: url('../images/highrise-profile.jpg');
+.venue-profile-bg {
   height: 475px;
   background-position: center;
   background-repeat: no-repeat;
@@ -798,7 +672,7 @@ a {
 
 .fa-left-bottom {
   float: left;
-  margin-top: 24.8em;
+  margin-top: 23.4em;
 }
 
 .fa-facebook:hover {

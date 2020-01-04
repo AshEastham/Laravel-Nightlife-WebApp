@@ -74,6 +74,7 @@
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About</a></li>
+                        <li><a href="/venues">Venues</a></li>
                         <li><a href="/contact">Contact Us</a></li>
                         <li><a href="/projects">Projects</a></li>                    
                     </ul>
@@ -92,6 +93,7 @@
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About</a></li>
+                        <li><a href="/venues">Venues</a></li>
                         <li><a href="/contact">Contact Us</a></li>
                         <li><a href="/projects">Projects</a></li> 
                     </ul>
@@ -149,7 +151,8 @@
       <!-- Include all compiled plugins (below), or include individual files as needed -->
       <script src="{{ asset('js/bootstrap.min.js') }}"></script>
       <script src="{{ asset('js/smooth_scroll.js') }}"></script>
-      <script src="{{ asset('js/fullscreen-nav.js') }}"></script>      
+      <script src="{{ asset('js/fullscreen-nav.js') }}"></script>
+          
            
     </body>
 </html>
