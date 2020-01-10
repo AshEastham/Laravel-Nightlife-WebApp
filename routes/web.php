@@ -30,12 +30,18 @@ Route::resource('venues', 'VenuesController');
 
 Route::resource('events', 'EventsController');
 
+Route::get('image', 'ImageController@index');
+
+Route::get('save', 'ImageController@save');
+
+
+// Unused atm
+
 Route::resource('projects', 'ProjectsController');
 
 Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
 
 Route::patch('/tasks/{task}', 'ProjectTasksController@update');
-
 
 
 
