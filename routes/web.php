@@ -28,6 +28,8 @@ Route::get('/contact', 'PagesController@contact');
 
 Route::resource('venues', 'VenuesController');
 
+Route::resource('events', 'EventsController');
+
 Route::resource('projects', 'ProjectsController');
 
 Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');

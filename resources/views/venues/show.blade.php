@@ -1,4 +1,4 @@
-@extends('../venue-layout')
+@extends('../venue-profile')
 
 @section('title')
     {{ $venue->name }}
@@ -15,7 +15,7 @@
             <ul>
               <li><a href="/venues" class="fa fa-left-bottom fa-arrow-left"></a></li>
             </ul>
-            <h1>{{ $venue->name }}</h1>
+            <h1>{{ $venue->name }}</h1>     
           </div>
         </div>
         
@@ -38,9 +38,13 @@
               <div class="grey">On the internet /</div>
               <ul>
                 <li><a href="{{ $venue->fbLink }}" target="_blank">Facebook</a>/ </li>
-                <li><a href="mailto:workmediacentre@gmail.com">Email</a>/ </li>
                 <li><a href="{{ $venue->siteLink }}" target="_blank">Website</a>/ </li>
+                <li><a href="mailto:{{ $venue->emailLink ?? "Email Unavailable" }}">Email</a>/ </li>
               </ul>
+              <div class="grey">Edit Venue /</div>
+              <div class="blue-link">
+                <a href="/venues/{{ $venue->name }}/edit">Edit</a>
+              </div>               
             </div>
             
             <div class="col-md-2 col-sm-12 counter">

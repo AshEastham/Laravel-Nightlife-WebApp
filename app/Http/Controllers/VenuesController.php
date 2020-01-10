@@ -51,14 +51,14 @@ class VenuesController extends Controller
     
     public function update(Venue $venue) 
     {
-        $project->update(request(['title', 'description']));
+        $venue->update(request(['name', 'about','biography','mapLat','mapLon','fbLink','siteLink','emailLink','indexImgSrc','profileImgSrc']));
         
         return redirect('/venues');
     }
     
     public function destroy(Venue $venue)
     {
-        $project->delete();
+        $venue->delete();
         return redirect('/venues');
     }    
 }

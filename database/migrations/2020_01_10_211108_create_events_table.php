@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVenuesTable extends Migration
+class CreateEventsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,13 @@ class CreateVenuesTable extends Migration
      */
     public function up()
     {
-        Schema::create('venues', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->text('about');
             $table->text('biography');
-            // mapLat & mapLon used for location of venues on google maps.
-            $table->decimal('mapLat', 10, 8); //ranges from -90 to +90 degrees
-            $table->decimal('mapLon', 11, 8); //ranges from -180 to +180 degrees
             $table->integer('favouritesCount')->default('1');
+            $table->text('vidLink');
             $table->text('fbLink');
-            $table->text('siteLink');
             $table->text('emailLink');
             $table->text('indexImgSrc');
             $table->text('profileImgSrc');
@@ -38,6 +34,6 @@ class CreateVenuesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('venues');
+        Schema::dropIfExists('events');
     }
 }
