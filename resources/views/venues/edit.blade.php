@@ -94,9 +94,12 @@
                 </div>
             </div>
             
+            @include('errors')
+            
         </div>
     </form>
     
+    @if (auth()->user()->id == 1)
     <form method="POST" action="/venues/{{ $venue->name }}">
         {{ method_field('DELETE') }}
         {{ csrf_field() }}
@@ -107,5 +110,6 @@
             </div>
         </div>
     </form>
+    @endif
     
 @endsection

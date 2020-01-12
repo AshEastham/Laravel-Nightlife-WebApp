@@ -30,9 +30,12 @@ Route::resource('venues', 'VenuesController');
 
 Route::resource('events', 'EventsController');
 
-Route::get('image', 'ImageController@index');
+/* IMAGE UPLOAD ROUTES */
 
-Route::get('save', 'ImageController@save');
+Route::post('fileUpload', [
+    'as' => 'image.add',
+    'uses' => 'ImageUploadController@fileUpload'
+]);
 
 
 // Unused atm
@@ -48,3 +51,5 @@ Route::patch('/tasks/{task}', 'ProjectTasksController@update');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/imageUpload', 'ImageUploadController@index');

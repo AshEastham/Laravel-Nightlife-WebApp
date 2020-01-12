@@ -41,10 +41,15 @@
                 <li><a href="{{ $venue->siteLink }}" target="_blank">Website</a>/ </li>
                 <li><a href="mailto:{{ $venue->emailLink ?? "Email Unavailable" }}">Email</a>/ </li>
               </ul>
+              @guest
+              
+              @else
               <div class="grey">Edit Venue /</div>
               <div class="blue-link">
                 <a href="/venues/{{ $venue->name }}/edit">Edit</a>
               </div>               
+              @endguest
+              
             </div>
             
             <div class="col-md-2 col-sm-12 counter">

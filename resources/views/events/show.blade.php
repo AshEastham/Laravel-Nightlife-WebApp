@@ -2,7 +2,7 @@
 
 @section('title')
     {{ $event->name }}
-@endsectionve
+@endsection
 
 @section('content')
 
@@ -40,10 +40,14 @@
                 <li><a href="{{ $event->fbLink }}" target="_blank">Facebook</a>/ </li>
                 <li><a href="mailto:{{ $event->emailLink ?? "Email Unavailable" }}">Email</a>/ </li>
               </ul>
-              <div class="grey">Edit event /</div>
+              @guest
+              
+              @else
+              <div class="grey">Edit Venue /</div>
               <div class="blue-link">
                 <a href="/events/{{ $event->name }}/edit">Edit</a>
               </div>               
+              @endguest              
             </div>
             
             <div class="col-md-2 col-sm-12 counter">

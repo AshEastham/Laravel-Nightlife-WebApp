@@ -37,9 +37,7 @@
                 placeholder="Venue about description, please enter a short opinion / description of the venue" 
                 value="{{ old('about') }}" 
                 required
-            >
-            
-            </textarea>
+            ></textarea>
         </div>
         
         <div class="form-group">
@@ -50,9 +48,7 @@
                 placeholder="Venue biography description, please enter an excerpt from the venue's official channels" 
                 value="{{ old('biography') }}" 
                 required
-            >
-            
-            </textarea>
+            ></textarea>
         </div>
         
         <h2>Venue Location Info</h2>

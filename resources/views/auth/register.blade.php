@@ -1,5 +1,12 @@
 @extends('../layout')
 
+@section('title')
+    Register
+@endsection
+
+@section('page-title')
+    Register
+@endsection
 
 @section('content')
 <div class="container">

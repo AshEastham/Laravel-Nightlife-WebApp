@@ -1,5 +1,13 @@
 @extends('../layout')
 
+@section('title')
+    Login
+@endsection
+
+@section('page-title')
+    Login
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row">

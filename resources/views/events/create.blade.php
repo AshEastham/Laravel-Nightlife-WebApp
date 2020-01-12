@@ -31,15 +31,13 @@
         
         <div class="form-group">
             <label for="biography">Event Biography Description</label><br>
-            <textarea 
+            <textarea
                 name="biography" 
                 class="form-control" 
                 placeholder="Event biography description, please enter an excerpt from the event's official channels" 
                 value="{{ old('biography') }}" 
                 required
-            >
-            
-            </textarea>
+            ></textarea>
         </div>
         
         <h2>Event Video Info</h2>
