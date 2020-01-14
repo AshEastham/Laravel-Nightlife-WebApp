@@ -1,5 +1,5 @@
 @extends('../venue-profile')
-
+<!-- Changes title of webpage in the browser to the Venues name, using an Eloquent short form query. -->
 @section('title')
     {{ $venue->name }}
 @endsection
@@ -10,11 +10,14 @@
     <div class="row">
     
         <!--VENUE IMAGE HEADER-->
+        <!-- Venue profileImgSrc dynamically assigned, by displaying an uploaded image and getting the image
+        from the user inputed src when creating a new Venue. From: 'public/images/imageName.jpg' -->        
         <div style="background-image: url({{ asset('images/' . $venue->profileImgSrc) }}) " class="col-md-12 profile-image venue-profile-bg">
           <div class="container profile-top-nav">
             <ul>
               <li><a href="/venues" class="fa fa-left-bottom fa-arrow-left"></a></li>
             </ul>
+            <!-- Venue Name, displayed dynamically from the database -->
             <h1>{{ $venue->name }}</h1>     
           </div>
         </div>
@@ -37,10 +40,13 @@
             <div class="col-md-10 col-sm-12 links">
               <div class="grey">On the internet /</div>
               <ul>
+                <!-- Social links pulled from the database -->
                 <li><a href="{{ $venue->fbLink }}" target="_blank">Facebook</a>/ </li>
                 <li><a href="{{ $venue->siteLink }}" target="_blank">Website</a>/ </li>
                 <li><a href="mailto:{{ $venue->emailLink ?? "Email Unavailable" }}">Email</a>/ </li>
               </ul>
+              <!-- If a user is a guest don't display the edit link, otherwise display the edit link
+                   which is further protected by Laravel's Auth Middleware, as Unauthorised users can't edit a Venue.-->
               @guest
               
               @else
@@ -55,6 +61,7 @@
             <div class="col-md-2 col-sm-12 counter">
               <div class="grey">Favourites /</div>
               <div id="counter" class="counter-display">
+                <!-- Favourites will default to 1, currently undefined feature -->
                 {{ $venue->favouritesCount }}
               </div>
               <i onclick="$venue->increment('favouritesCounter')" class="fas fa-heart favourite-button"><a class="favourite-button-inner" href="#">Favourite</a></i>
@@ -71,6 +78,7 @@
             <div class="col-lg-12" id="about">
               <h1>About</h1>
               <p>
+                <!-- Venue 'about', 'biography' attribute displayed from the database -->
                 {{ $venue->about }}
               </p>
             </div>
@@ -83,6 +91,8 @@
           </div>
           
           <!--MAP CONTAINER AND SCRIPTS-->
+          <!-- Google Map's API used dynamically to display the location of different Venues,
+               as the Latitude and Longitude of the Venue are specified when creating a new Venue. -->
           <div class="col-lg-12" id="map" style="width:100%;height:300px;"></div>
           <script>
             function initMap() {

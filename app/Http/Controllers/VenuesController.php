@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Venue;
 use App\Mail\VenueCreated;
+// use App\Events\VenueCreated;
 
 use Illuminate\Http\Request;
 
@@ -42,6 +43,8 @@ class VenuesController extends Controller
             new VenueCreated($venue)
         
         );
+        
+        event(new VenueCreated($venue));
         
         return redirect('/venues');
     }

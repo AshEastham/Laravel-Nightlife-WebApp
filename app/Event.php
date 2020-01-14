@@ -12,4 +12,11 @@ class Event extends Model
     {
         return 'name';
     }
+    
+    public function venue()
+    {
+        return 
+            // $this->hasOne(Venue::class);
+            $this->belongsTo(Venue::class);
+    }
 }

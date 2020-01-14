@@ -17,7 +17,6 @@ class ImageUploadController extends Controller
      */
 
     public function index()
-
     {
 
         return view('imageUpload');
@@ -37,9 +36,7 @@ class ImageUploadController extends Controller
      */
 
     public function fileUpload(Request $request)
-
     {
-
         $image = $request->file('image');
         $input = $image->getClientOriginalName();
         $destinationPath = public_path('/images');
@@ -47,7 +44,7 @@ class ImageUploadController extends Controller
 
         return back()
 
-            ->with('Success!','You have successfully uploaded your image.')
+            ->with('success','You have successfully uploaded your image.')
 
             ->with('image', $input);
 

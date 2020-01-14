@@ -22,10 +22,6 @@
 
 Route::get('/', 'PagesController@home');
 
-Route::get('/about', 'PagesController@about');
-
-Route::get('/contact', 'PagesController@contact');
-
 Route::resource('venues', 'VenuesController');
 
 Route::resource('events', 'EventsController');

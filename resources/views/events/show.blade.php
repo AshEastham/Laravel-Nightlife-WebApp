@@ -82,9 +82,8 @@
             </div>
             <div class="col-lg-12" id="venue">
               <h1>Venues</h1>
-              <p>
+                <!--DISPLAY EVENT VENUE-->
                 x
-              </p>
             </div>            
           </div> 
         
