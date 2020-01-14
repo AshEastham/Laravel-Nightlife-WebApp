@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class ImageUploadController extends Controller
 {
+    
+    public function __construct()
+    {
+        $this->middleware('auth')->only(['index','fileUpload']);
+    }
+    
     /**
 
      * Display a listing of the resource.

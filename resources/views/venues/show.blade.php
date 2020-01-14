@@ -29,6 +29,7 @@
               <li><a href="#about">About</a></li>
               <li><a href="#bio">Biography</a></li>
               <li><a href="#map">Location</a></li>
+              <li><a href="#event">Events</a></li>
             </ul>
           </div>
         </div>
@@ -87,7 +88,7 @@
               <p>
                 {{ $venue->biography }}
               </p>
-            </div>
+            </div>              
           </div>
           
           <!--MAP CONTAINER AND SCRIPTS-->
@@ -107,8 +108,34 @@
               });
             }
           </script>
-          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDx9c7Xirtj2tFeTEmaUEfHJCEOWo0flHE&callback=initMap"></script>          
-        
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDx9c7Xirtj2tFeTEmaUEfHJCEOWo0flHE&callback=initMap"></script>
+          
+          <div class="profile-main">
+            <div class="container">
+                <div class="col-lg-12" id="event">
+                  <h1>Events</h1>
+                    <div class="container3" id="grid">                
+                        <!--DISPLAY EVENT VENUE-->
+                        <?php $events = $venue->events ?>
+                        @foreach ($events as $event)
+                            <div class="col-md-4 stage">
+                                <img src="{{ asset('images/' . $event->indexImgSrc) }}" alt="{{ $event->name }}" width="1600" height="900" class="img-responsive" style="opacity: 0.8;">
+                                <div class="caption">
+                                    <h2 class="stage-name" style="display: block; opacity: 1;">{{ $event->name }}</h2>
+                                    <p class="stage-desc" style="display: none;">
+                                        "For all you need to know about {{ $event->name }}. "
+                                        <br>
+                                        <br>
+                                        <a href="/events/{{ $event->name }}">Click Here</a>
+                                    </p>
+                                </div>
+                            </div>
+                        @endforeach                                 
+                    </div>
+                </div>
+             </div>   
+          </div>
+
     </div>
 </div>
 

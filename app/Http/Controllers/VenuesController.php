@@ -12,18 +12,20 @@ class VenuesController extends Controller
 {
     public function __construct()
     {
-        // Can't access edit Venues features without being authenticated.
+        // Can't access edit Venues features without being authenticated.  Using the Auth Middleware.
         $this->middleware('auth')->only(['create','store','edit','update','destroy']);
     }
     
     public function index() 
     {
+        // Show's all venues.
         $venues = Venue::all();
         
         return view('venues.index', compact('venues'));
     }
     
     public function show(Venue $venue) {
+        // Venues Show Method, displays the selected Venue.
         return view('venues.show', compact('venue'));
     }
     
@@ -34,17 +36,19 @@ class VenuesController extends Controller
     
     public function store()
     {
+        // Validate Form attributes, as defined in the function below.  
         $attributes = $this->validateVenue();
-        
+        // Create a new Venue, as long as attributes are valid.  
         $venue = Venue::create($attributes);
         
+        // Mailable to 'admin' user when a new Venue is created.  
         \Mail::to('ash-eastham@hotmail.co.uk')->send(
         
             new VenueCreated($venue)
         
         );
         
-        event(new VenueCreated($venue));
+        // event(new VenueCreated($venue));
         
         return redirect('/venues');
     }
@@ -70,6 +74,7 @@ class VenuesController extends Controller
     
     protected function validateVenue()
     {
+        // Take the POST request data, validate it and return it for use.
         return request()->validate([
             'name' => ['required', 'min:3'],
             'about' => ['required', 'min:3'],
@@ -81,6 +86,7 @@ class VenuesController extends Controller
             'emailLink' => ['min:3'],
             'indexImgSrc' => ['required', 'min:3'],
             'profileImgSrc' => ['required', 'min:3'],
+            'event_id' => ['min:1']
         ]);
     }
 }

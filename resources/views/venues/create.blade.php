@@ -12,7 +12,10 @@
     <h1>Create A New Venue</h1>
     
     <form method="POST" action="/venues">
-    
+        <!-- CSRF field prevents Cross-Site Request Forgery -->
+        <!-- This code will generate a CSRF token, which is generated automatically for each user.
+             It's nothing more than a random string, managed by Laravel to verify a users request. 
+             Requests are validated automatically by the CSRF VerifyCsrfToken middleware.-->
         {{ csrf_field() }}
         
         <h2>General Venue Info</h2>
@@ -123,7 +126,7 @@
             size is 1340 x 575.  
         </p>
         <p>
-            Images can be uploaded using the photo upload utility, which you can find <a href="#">here</a>
+            Images can be uploaded using the photo upload utility, which you can find <a href="{{ url('/imageUpload') }}" target="_blank"><strong>here</strong></a>
         </p>
         
         <div class="form-group">

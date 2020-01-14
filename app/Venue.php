@@ -18,6 +18,8 @@ class Venue extends Model
         return 'name';
     }
     
+    // Venues have many events.
+    // Currently only defining in the MySQL database.
     public function events()
     {
         return $this->hasMany(Event::class);

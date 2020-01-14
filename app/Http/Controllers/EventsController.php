@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Venue;
 use App\Event;
 use App\Mail\EventCreated;
 
@@ -81,6 +82,8 @@ class EventsController extends Controller
             'emailLink' => ['min:3'],
             'indexImgSrc' => ['required', 'min:3'],
             'profileImgSrc' => ['required', 'min:3'],
+            'venue_id' => ['min:1']
         ]);
-    }    
+    }
+    
 }

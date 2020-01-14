@@ -34,7 +34,7 @@ Route::post('fileUpload', [
 ]);
 
 
-// Unused atm
+/* Unused atm
 
 Route::resource('projects', 'ProjectsController');
 
@@ -42,7 +42,7 @@ Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
 
 Route::patch('/tasks/{task}', 'ProjectTasksController@update');
 
-
+*/
 
 Auth::routes();
 

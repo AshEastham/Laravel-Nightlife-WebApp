@@ -54,6 +54,8 @@
             >
         </div>
         
+        <img src="{{ asset('images/videoEmbed.gif') }}" class="img-responsive">
+        
         <h2>Event Social Info</h2>
         
         <div class="form-group">
@@ -88,7 +90,7 @@
             size is 1340 x 575.  
         </p>
         <p>
-            Images can be uploaded using the photo upload utility, which you can find <a href="#">here</a>
+            Images can be uploaded using the photo upload utility, which you can find <a href="{{ url('/imageUpload') }}" target="_blank"><strong>here</strong></a>
         </p>
         
         <div class="form-group">
